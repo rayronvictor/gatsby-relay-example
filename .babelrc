@@ -1,0 +1,4 @@
+{
+  "plugins": ["relay"],
+  "presets": ["babel-preset-gatsby"]
+}

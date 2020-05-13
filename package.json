@@ -7,6 +7,7 @@
   "dependencies": {
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
+    "gatsby-plugin-create-client-paths": "^2.3.0",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-offline": "^3.1.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
@@ -14,25 +15,32 @@
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-sharp": "^2.4.6",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react": "^0.0.0-experimental-33c3af284",
+    "react-dom": "^0.0.0-experimental-33c3af284",
+    "react-helmet": "^6.0.0",
+    "react-relay": "^0.0.0-experimental-8cc94ddc",
+    "relay-runtime": "^9.0.0"
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "babel-plugin-relay": "^9.1.0",
+    "babel-preset-gatsby": "^0.4.2",
+    "graphql": "^15.0.0",
+    "prettier": "2.0.4",
+    "relay-compiler": "^9.0.0"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "yarn run relay && gatsby build",
+    "develop": "yarn run relay && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "relay": "yarn run relay-compiler --schema schema.graphql --src ./src/ --watchman false $@"
   },
   "repository": {
     "type": "git",
