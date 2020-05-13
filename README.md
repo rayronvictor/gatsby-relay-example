@@ -1,4 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+To run this example you will need to generate a [personal Github Token](https://github.com/settings/tokens) and 
+add `REACT_APP_GITHUB_AUTH_TOKEN=YOUR_TOKEN` to your `.env` file.
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
